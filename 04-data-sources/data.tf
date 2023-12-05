@@ -16,20 +16,20 @@ data "aws_security_group" "selected" {
   name = "allow-all"
 }
 
-output "sgid"{
+output "sgid" {
   value = data.aws_security_group.selected.id
 }
 
 data "aws_ami" "example" {
-  owners = ["973714476881"]
+  owners      = ["973714476881"]
   most_recent = true
-  name_regex = "centos-8-Devops-Practice"
+  name_regex  = "Centos-8-DevOps-Practice"
 }
 
 output "ami" {
   value = data.aws_ami.example.id
 }
 
-provider "aws"{
+provider "aws" {
   region = "us-east-1"
 }
