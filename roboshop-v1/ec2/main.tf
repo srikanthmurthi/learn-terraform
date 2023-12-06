@@ -41,7 +41,6 @@ data "aws_ami" "example" {
   name_regex  = "Centos-8-DevOps-Practice"
 }
 
-
 resource "aws_security_group" "sg" {
   name        = var.name
   description = "Allow TLS inbound traffic"
