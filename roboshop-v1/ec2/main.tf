@@ -35,7 +35,6 @@ resource "aws_route53_record" "www" {
   records = [aws_instance.web.private_ip]
 }
 
-
 data "aws_ami" "example" {
   owners      = ["973714476881"]
   most_recent = true
